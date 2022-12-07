@@ -26,7 +26,7 @@
       NSLog(@"No compatible method found to communicate 3D Touch callback to the webview. Please notify the plugin author.");
     }
   } else {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 25 * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 450 * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
       [self callJavascriptFunctionWhenAvailable:function];
     });
   }
